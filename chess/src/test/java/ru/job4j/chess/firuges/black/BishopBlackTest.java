@@ -26,11 +26,8 @@ public class BishopBlackTest {
     public void testWay() {
         BishopBlack bishopBlack = new BishopBlack(Cell.C1);
         Cell[] cells = bishopBlack.way(Cell.G5);
-        String res = "";
-        for (Cell c : cells) {
-            res += "" + c.getX() + c.getY();
-        }
-        assertEquals(res, "" + Cell.D2.getX() + Cell.D2.getY() + Cell.E3.getX() + Cell.E3.getY() + Cell.F4.getX() + Cell.F4.getY() + Cell.G5.getX() + Cell.G5.getY());
+        Cell[] actual = new Cell[]{Cell.D2, Cell.E3, Cell.F4, Cell.G5};
+        assertEquals(cells, actual);
     }
 
     @Test
